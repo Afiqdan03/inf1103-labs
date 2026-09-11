@@ -1,11 +1,13 @@
 inv = []
 quit = 0
+failed = 0
 
 while quit == 0:
     info = input("Please enter stock quantity:")
     if info == "quit":
         print ("Thank you for updating")
         print ("Here is the total:", total)
+        print ("Here is the no of failed updates:", failed)                              
         break
     elif (info.isdigit()) == True:
         new_info = int(info)
@@ -21,7 +23,11 @@ while quit == 0:
             if total > 500 :
                 print ("Overstock Alert")  
                 print ("Thank you for updating")
-                print ("Here is the total:", total)                                  
+                print ("Here is the total:", total)     
+                print ("Here is the no of failed updates:", failed)  
+                break                            
         print ("Accepted")     
     else:
-        print ("Rejected/invalid Input")                              
+        print ("Rejected/invalid Input")  
+        failed +=1
+                                    
