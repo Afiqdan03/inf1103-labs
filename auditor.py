@@ -5,7 +5,7 @@ while quit == 0:
     info = input("Please enter stock quantity:")
     if info == "quit":
         print ("Thank you for updating")
-        print ("Here is the total", total)
+        print ("Here is the total:", total)
         break
     elif (info.isdigit()) == True:
         new_info = int(info)
@@ -17,7 +17,11 @@ while quit == 0:
             inv.append(new_info)
             print (inv)                                              #  Show user list
             int_inv = list(map(int, inv)) 
-            total = sum(int_inv)                                     
+            total = sum(int_inv) 
+            if total > 500 :
+                print ("Overstock Alert")  
+                print ("Thank you for updating")
+                print ("Here is the total:", total)                                  
         print ("Accepted")     
     else:
         print ("Rejected/invalid Input")                              
