@@ -1,6 +1,7 @@
 inv = []
 quit = 0
 failed = 0
+total = 0
 
 while quit == 0:
     info = input("Please enter stock quantity:")
